@@ -38,7 +38,9 @@ age = 50;
 console.log(age)
 // redeclarig age to be 70
 var age = 70;
-console.log(age)
+console.log(age);
+
+
 
 // When naming variables:
 // 1. You cannot use number to start the name of your variable
@@ -47,3 +49,4 @@ console.log(age)
 
 // 2. You can use numbers, letters and underscore(_) at the middle but you can't use & to start a variable name .
 
+// 3. You can't use these keywords to name a varibale : let,const , var, function
