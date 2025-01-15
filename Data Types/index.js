@@ -55,12 +55,8 @@ if (newAge > 30) {
     console.log('newAge is lesser than 30')
 }
 
-// Object
-// let car = {
-//     tyres = 4,
-//     screen = 1,
+// 8. Object
 
-// }
 
 
 // Boolean can only be true or false
@@ -76,4 +72,10 @@ console.log(typeof score)
 // ASSIGNMENTS
 // Declare a variable called 'isIsland' and set its value according to your country. The variable should hold a Boolean value. Also declare a variable 'language', but don't assign it any value yet
 // 2. Log the types of 'isIsland', 'population', 'country' and 'language' to the console
+
+// SOLUTION
+ let isIsland = true;
+ let language;
+
+ console.log(typeof isIsland)
 
