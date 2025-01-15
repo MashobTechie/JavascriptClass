@@ -50,3 +50,17 @@ console.log(age);
 // 2. You can use numbers, letters and underscore(_) at the middle but you can't use & to start a variable name .
 
 // 3. You can't use these keywords to name a varibale : let,const , var, function
+
+
+
+// Constructingt sentences with variables.
+// Create a variable for firstname, lastname and age. 
+// Construct a sentence with my name is (firstname) and your (lastname). I am (age) years old.
+
+let firstname = 'Mariam';
+let lastname = 'Abdulkareem';
+let myAge = 40;
+
+console.log('My name is ' +  firstname ,lastname);
+// I am 40 years old
+console.log('I am ' + myAge + 'years old')
