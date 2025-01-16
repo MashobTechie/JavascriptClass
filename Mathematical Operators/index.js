@@ -29,7 +29,7 @@ console.log(DecreamentNumber)
 // Exponential Operator: Denoted by **
 console.log(2**3)
 
-// Create a variable with your country's population.
+// Create a variable with your country's population.Also, craete a variable country = portugal.
  // 2. Increase the population of your country by 1 and log the result to the console
 // 3. Finland has a population of 6 million. Does your country have more people than Finland?
 // 4. The average population of a country is 33 million people. Does your country have less people than the average country?
