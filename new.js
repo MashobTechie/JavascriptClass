@@ -64,3 +64,35 @@ let myAge = 40;
 console.log('My name is ' +  firstname ,lastname);
 // I am 40 years old
 console.log('I am ' + myAge + 'years old')
+
+
+// BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter).
+// Your tasks:
+// 1. Store Mark's and John's mass and height in variables
+// 2. Calculate both their BMIs using the formula (you can even implement both versions)
+// 3. Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John
+
+// Solution
+let markHeight = 6;
+let markMass = 70;
+let johnHeight = 5;
+let johnMass = 60;
+
+let markBMI = markMass/(markHeight**2);
+console.log('markBMI is ' + markBMI);
+let johnBMI = johnMass/(johnHeight**2);
+console.log('johnBMI is ' + johnBMI);
+
+if (markBMI > johnBMI) {
+    console.log(true)
+} else {
+    console.log(false)
+}
+
+// console.log('MarkBMI is ' + markBMI); 
+// first way if writing statement in the console.log
+
+// second way of writing statement in the console.log
+// Using back-tick(``) and dollar-sign($) and {}. This is called string literals
+
+console.log(`MarkBMI is ${markBMI}`);
