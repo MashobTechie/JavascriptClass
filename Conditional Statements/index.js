@@ -86,3 +86,4 @@ if (billValue >= 50  <= 300){
 }
 const finalValue = billValue + tip
 console.log(`The bill was ${billValue}, the tip was ${tip}, and the total value is ${finalValue}`)
+  
