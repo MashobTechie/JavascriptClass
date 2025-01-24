@@ -73,13 +73,13 @@
 
  
 // SOLUTION
-const billValue = 200;
-// const tip = 0.15;
-const differentTip = 0.2
+const billValue = 310;
+let tip = null;
+// const differentTip = 0.2
 
 
 
-if (billValue >= 50  <= 300){
+if (billValue >= 50 && billValue  <= 300){
   tip = 0.15
 }else{
     tip = 0.2
