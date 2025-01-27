@@ -71,19 +71,20 @@
 //  Value X is between 50 and 300, if it's >= 50 && <= 300 
 
 
- 
+
 // SOLUTION
 const billValue = 310;
 let tip = null;
-// const differentTip = 0.2
-
-
-
-if (billValue >= 50 && billValue  <= 300){
+if (billValue >= 50 && billValue <= 300) {
   tip = 0.15
-}else{
-    tip = 0.2
-}
-const finalValue = billValue + tip
-console.log(`The bill was ${billValue}, the tip was ${tip}, and the total value is ${finalValue}`)
-  
+} else {
+  tip = 0.2
+};
+
+const finalValue = billValue + tip;
+
+
+console.log(`The bill was ${billValue}, the tip was ${tip}, and the total value is ${finalValue}`);
+
+
+
