@@ -1,7 +1,7 @@
 'use strict';
 
-// Functions are block of code written together or designed to perform apartivular task
-//  The format of writing function is as follows: function  nameOfFunction (parame or argument) {}
+// Functions are block of code written together or designed to perform a partivular task
+//  The format of writing function is as follows: function  nameOfFunction (parameter or argument) {}
 // We used the above code to check if a driver is elgible to drive. To enance reusability, we put all these chunks of code together iside a function.
 function checkDriverEligiblity() {
     // Write as many code as possible for your work
@@ -54,3 +54,50 @@ function addNumbers() {
 
 // Assignment
 //  Use this function knowledge to build a calculator.
+
+
+function TipCalculator() {
+    // Create a zero instance for the tip.
+    let tip = null;
+
+    // Create billValue variable
+    let billValue = 280;
+
+    // Create the ternary Operator statement
+    // condition ? true statement : false statement
+
+    billValue >= 50 && billValue <= 300 ? tip = 0.15 : tip = 0.2;
+
+    let finalValue = billValue + tip;
+
+    console.log(`The billValue is ${billValue} , the tip is ${tip} and the finalValue is ${finalValue}`)
+}
+
+TipCalculator()
+
+// Normal Function
+// function addNumber (){
+//     let firstNumber = 2;
+//     let secondNumber = 3;
+//     let result = firstNumber + secondNumber;
+//     console.log(result);
+// };
+// addNumber()
+
+//  Parameter or argument
+function addNumber(firstNumber, secondNumber) {
+    const addBoth = firstNumber + secondNumber
+    return (addBoth)
+    // console.log(addBoth)
+}
+ const result = addNumber(3, 5)
+console.log(`This is the result from argument function . ${result}`)
+
+
+
+function juiceProcessor (apples , mangoes , oranges){
+    let ourJuice = `We have ${apples} apples , ${mangoes} mangoes and ${oranges} oranges`
+    return (ourJuice)
+}
+let juiceDescription = juiceProcessor (8, 10, 12)
+console.log(juiceDescription)
