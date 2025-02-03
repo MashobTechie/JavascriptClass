@@ -103,11 +103,11 @@ console.log(`This is the result from argument function . ${result}`)
 // console.log(juiceDescription);
 
 
-// // Anonymous Function
-const anonymousFunction = function () {
+// // // Anonymous Function
+// const anonymousFunction = function () {
 
-}
-juiceProcessor()
+// }
+// juiceProcessor()
 
 
 // Arrow Function
@@ -136,50 +136,38 @@ const newFunction = () => {
 // Apply this to the team's average scores �
 // GOOD LUCK �
 
-
-
 // Check If Number
 // Write a JavaScript program to check if a given argument is a number.
-
-
-
-
-
-
 
 // Check If Even Number
 // Write a JavaScript program that returns true if the given number is even, false otherwise.
 
 
 
-
 // Functions calling other functions. 
+// const cutPieces = (fruit) => {
 
-const cutPieces = (fruit) => {
-
-    let fruitPieces = fruit * 4
-    return fruitPieces;
-}
-
+//     let fruitPieces = fruit * 4;
+//     return fruitPieces;
+// }
 
 
+// function juiceProcessor(apples, mangoes, oranges) {
+//     const applePiece = cutPieces(apples)
 
-function juiceProcessor(apples, mangoes, oranges) {
-    const applePiece = cutPieces(apples)
-    console.log(`Apple pieces is ${applePiece}`)
+//     console.log(`Apple pieces is ${applePiece}`)
 
-    const mangoPiece = cutPieces(mangoes)
-    const orangePiece = cutPieces(oranges)
+//     const mangoPiece = cutPieces(mangoes)
+//     const orangePiece = cutPieces(oranges)
 
-    let ourJuice = `We have ${applePiece} pieces of apples , ${mangoPiece} pieces of  mangoes and ${orangePiece} pieces of  oranges`
-    return (ourJuice);
-}
-let juiceDescription = juiceProcessor(8, 10, 12)
-console.log(juiceDescription);
+//     let ourJuice = `We have ${applePiece} pieces of apples , ${mangoPiece} pieces of  mangoes and ${orangePiece} pieces of  oranges`
+//     return (ourJuice);
+// }
+// let juiceDescription = juiceProcessor(8, 10, 12)
+// console.log(juiceDescription);
 
 
 // ASSIGNMENT
-
 // Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
 // Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
 // A team only wins if it has at least double the average score of the other team.
@@ -201,3 +189,29 @@ console.log(juiceDescription);
 // GOOD LUCK �
 
 // Use the function calling other function method to solve this. Don't calculate the average score of each team separately.
+
+
+//SOLUTION
+const calcAverage = (score1, score2, score3) => {
+    let avgScore = (score1 + score2 + score3) / 2;
+    return avgScore;
+}
+console.log(calcAverage(68, 70, 78));
+
+// Calculate average score of Dolphins
+const dolphinsAvg = console.log(` Dolphins Average is ${calcAverage(120, 100, 140)}`);
+// Calculate for koalas
+const koalasAvg = console.log(`Koalas Average is ${calcAverage(120, 110, 150)}`);
+
+function checkWinner(avgDolhins, avgKoalas) {
+    if (avgDolhins > 2 * avgKoalas) {
+        console.log(`Dolphins is the winner`)
+    } else if (avgKoalas > 2 * avgKoalas) {
+        console.log(`Koalas is the winner`)
+    } else {
+        console.log(`It's a draw`)
+    }
+
+}
+checkWinner(dolphinsAvg, koalasAvg);
+ 
