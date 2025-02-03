@@ -214,4 +214,3 @@ function checkWinner(avgDolhins, avgKoalas) {
 
 }
 checkWinner(dolphinsAvg, koalasAvg);
- 

@@ -15,6 +15,7 @@
 // b. let
 // c. var
 
+// conditiionalStatement
 
 // Const : used for declaring variables that cannot be changed.
 // cannot be redeclared or reassign
