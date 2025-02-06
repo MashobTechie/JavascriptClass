@@ -14,8 +14,10 @@ const car = {
     tyres: 4,
     steering: 1,
     windscreen: 2,
-    doors: 4
-}
+    doors: 4,
+
+
+};
 
 console.log(car)
 
@@ -36,7 +38,3 @@ console.log(carDescription)
 // console.log(car['steering'])
 // console.log(car['doors'])
 // console.log(car['windscreen'])
-
-
-
-
