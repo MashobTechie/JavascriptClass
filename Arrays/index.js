@@ -11,7 +11,7 @@ const friend3 = 'Sope';
 const friends = ['Tolu', 'Tolua', 'Sope'];
 friends[0] = 'Tayo'
 // const friends = [friend1, friend2 , friend3];
-console.log(friends)
+console.log(friends);
 //Checking the length of your array
 console.log(friends.length)
 //  To replace/mutate an element in an array
