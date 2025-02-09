@@ -27,8 +27,8 @@ const nationality = 'Nigeria'
 let name = 'Tayo'
 console.log(name)
 // Re-assigned a value to variable name
- name= 'Tolu';  
- console.log(name)
+name = 'Tolu';
+console.log(name)
 
 //  var: used for declaring variables. they can be redecalred and also, be reassigned
 var age = 30;
@@ -36,7 +36,7 @@ console.log(age);
 // reassigned age to be 50
 age = 50;
 console.log(age)
-// redeclarig age to be 70
+// redeclaring variable age to be 70
 var age = 70;
 console.log(age);
 
@@ -61,7 +61,7 @@ let firstname = 'Mariam';
 let lastname = 'Abdulkareem';
 let myAge = 40;
 
-console.log('My name is ' +  firstname ,lastname);
+console.log('My name is ' + firstname, lastname);
 // I am 40 years old
 console.log('I am ' + myAge + 'years old')
 
@@ -78,9 +78,9 @@ let markMass = 70;
 let johnHeight = 5;
 let johnMass = 60;
 
-let markBMI = markMass/(markHeight**2);
+let markBMI = markMass / (markHeight ** 2);
 console.log('markBMI is ' + markBMI);
-let johnBMI = johnMass/(johnHeight**2);
+let johnBMI = johnMass / (johnHeight ** 2);
 console.log('johnBMI is ' + johnBMI);
 
 if (markBMI > johnBMI) {
