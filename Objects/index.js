@@ -1,40 +1,114 @@
-//Objects
 'use strict';
+// Objects
 
-const teacher = [
-    'Tolu',
-    15
-]
+// Array
+const nameArray = ['Joy', 'Kate', 'David'];
 
-//Object is a container used for storing a name: value pair.
+// Object is a container for storing key:value pairs
+// Key also  means property or name
 
-// First Method:
-const car = {
-    // Properties of car object
-    tyres: 4,
-    steering: 1,
-    windscreen: 2,
-    doors: 4,
+// To initialize an object:
 
+// First method: Use of curly bracket 
+// const boy = {
+//     firstName: 'David',
+//     lastName: 'Luiz',
+//     age: 2025 - 2000,
+//     friends: ['John', 'Katherine', 'David',],
+//     occupation: 'Doctor',
+
+// };
+// console.log(boy);
+
+
+// Alert is used to show an output
+// alert(boy.firstName);
+
+
+
+
+
+
+
+
+
+const user = {
+    firstname: 'David',
+    lastname: 'Kevin',
+    email: 'john@example.com',
 
 };
+console.log(user);
 
-console.log(car)
+user.lastname = 'Paul'
+console.log(user);
 
 
 
-// Second Method
-const newCar = new Object();
 
-// Dot And Bracket Notation: They're used to retrieve data from object. 
+// Second Method: Use of object keyword
 
-//Using dot notation
-console.log('' + (car.tyres));
-//Using bracket notation
-console.log('This car has ' + car['tyres']);
-const carDescription = 'This car has ' + car['tyres'] + ' tyres ' + car['steering'] + ' steering ' + car['doors'] + ' doors';
-console.log(carDescription)
+const girl = new Object();
 
-// console.log(car['steering'])
-// console.log(car['doors'])
-// console.log(car['windscreen'])
+
+
+console.log(girl)
+
+// Ways of adding properties to an object
+// Dot Notation
+girl.firstName = 'Joy';
+girl.lastName = 'John';
+girl.age = 30;
+console.log(girl);
+
+
+// Bracket Notation
+
+girl['age'] = 37;
+console.log(girl);
+
+
+
+const boy = {
+    firstName: 'David',
+    lastName: 'Luiz',
+    age: 2025 - 2000,
+    friends: ['John', 'Katherine', 'David',],
+    occupation: 'Doctor',
+
+};
+console.log(boy);
+
+// Use of prompt: Prompts allows us to ask questions
+const userQuestion = prompt('What do you want to know about boy? The detail must be between firstName, lastName , age, friends , occupation');
+console.log(`User wants to know ${userQuestion} about the boy`);
+const answer = boy[userQuestion]
+// console.log(answer);
+
+// console.log(userQuestion)
+
+if (boy[userQuestion]) {
+    console.log(answer)
+} else {
+    console.log('The request is invalid!. The detail must be between firstName, lastName , age, friends , occupation')
+}
+
+
+
+// Assignment
+// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to 
+// implement the calculations! Remember: BMI = mass / height ** 2 = mass 
+// / (height * height) (mass in kg and height in meter)
+// Your tasks:
+// 1. For each of them, create an object with properties for their full name, mass, and 
+// height (Mark Miller and John Smith)
+// 2. Create a 'calcBMI' method on each object to calculate the BMI (the same 
+// method on both objects). Store the BMI value to a property, and also return it 
+// from the method
+// 3. Log to the console who has the higher BMI, together with the full name and the 
+// respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m 
+// tall.
+// GOOD LUCK 
+
+

@@ -25,7 +25,8 @@ const nationality = 'Nigeria'
 // let : used fo declaring variables. They cannot be redeclared but can be reassigned
 // eg:
 let name = 'Tayo'
-console.log(name)
+console.log(name);
+
 // Re-assigned a value to variable name
 name = 'Tolu';
 console.log(name)
