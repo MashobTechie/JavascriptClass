@@ -2,6 +2,7 @@ const calcTip = (billValue) => {
     return billValue >= 50 && billValue <= 300 ? 0.15 * billValue : 0.2 * billValue;
 }
 
+// log an instance of the function to the console.
 console.log(calcTip(100));
 
 
@@ -10,6 +11,7 @@ const billValues = [125, 555, 44]
 const ourTips = [calcTip(billValues[0]), calcTip(billValues[1]), calcTip(billValues[2])]
 console.log(ourTips);
 
+// Create an expression
 // Tip for billValue 125 is 18.75
 const expression = `The tip for billValue ${billValues[0]} is ${ourTips[0]}`
 console.log(expression)
