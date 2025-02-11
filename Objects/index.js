@@ -96,19 +96,55 @@ if (boy[userQuestion]) {
 
 
 // Assignment
-// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to 
-// implement the calculations! Remember: BMI = mass / height ** 2 = mass 
+// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to
+// implement the calculations! Remember: BMI = mass / height ** 2 = mass
 // / (height * height) (mass in kg and height in meter)
 // Your tasks:
-// 1. For each of them, create an object with properties for their full name, mass, and 
+// 1. For each of them, create an object with properties for their full name, mass, and
 // height (Mark Miller and John Smith)
-// 2. Create a 'calcBMI' method on each object to calculate the BMI (the same 
-// method on both objects). Store the BMI value to a property, and also return it 
+// 2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+// method on both objects). Store the BMI value to a property, and also return it
 // from the method
-// 3. Log to the console who has the higher BMI, together with the full name and the 
+// 3. Log to the console who has the higher BMI, together with the full name and the
 // respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
-// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m 
+// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
 // tall.
 // GOOD LUCK 
+ 
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi
+    }
+}
+// console.log(m);
+
+console.log(mark.calcBMI(), mark);
 
 
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+console.log(john.calcBMI(), john);
+
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName} with a BMI of ${mark.bmi} has higher bmi than  ${john.fullName} BMI of ${john.bmi}`);
+
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName} with a BMI of ${john.bmi} has higher bmi than  ${mark.fullName} BMI of ${mark.bmi}`);
+}
+
+else {
+    console.log(`It is a draw. No one nhas higher BMI than the other`)
+}
