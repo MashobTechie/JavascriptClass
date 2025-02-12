@@ -110,7 +110,7 @@ if (boy[userQuestion]) {
 // Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
 // tall.
 // GOOD LUCK 
- 
+
 const mark = {
     fullName: 'Mark Miller',
     mass: 78,
@@ -143,8 +143,6 @@ if (mark.bmi > john.bmi) {
 
 } else if (john.bmi > mark.bmi) {
     console.log(`${john.fullName} with a BMI of ${john.bmi} has higher bmi than  ${mark.fullName} BMI of ${mark.bmi}`);
-}
-
-else {
+} else {
     console.log(`It is a draw. No one nhas higher BMI than the other`)
 }

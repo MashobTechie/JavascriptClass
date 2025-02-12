@@ -39,3 +39,5 @@ console.log(`${totalValues[0]}  is the total value of ${billValues[0]} and ${our
 // In the said array check every numbers are prime or not! true
 // Original array of integers: 2,3,5,7,8
 // In the said array check every numbers are prime or not! false
+
+
