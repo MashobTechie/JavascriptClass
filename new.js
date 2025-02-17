@@ -99,46 +99,4 @@ if (markBMI > johnBMI) {
 console.log(`MarkBMI is ${markBMI}`);
 
 
-
-// Favorite Movies List Program
-const movies = []; // Array to store movies
-
-function addMovie() {
-    let title = prompt("Enter movie title:");
-    let year = prompt("Enter movie release year:");
-
-    // Validate input
-    if (!title || !year || isNaN(year)) {
-        console.log("Invalid input. Please enter a valid movie title and year.");
-        return;
-    }
-
-    movies.push({ title, year });
-    console.log(`"${title}" (${year}) added to your list!`);
-}
-
-function displayMovies() {
-    if (movies.length === 0) {
-        console.log("No movies in your list.");
-        return;
-    }
-
-    console.log("Your Favorite Movies:");
-    movies.forEach((movie, index) => console.log(`${index + 1}. ${movie.title} (${movie.year})`));
-}
-
-// Example usage
-while (true) {
-    let action = prompt("Type 'add' to add a movie, 'list' to display movies, or 'exit' to quit:").toLowerCase();
-    
-    if (action === "add") {
-        addMovie();
-    } else if (action === "list") {
-        displayMovies();
-    } else if (action === "exit") {
-        console.log("Goodbye!");
-        break;
-    } else {
-        console.log("Invalid command. Please type 'add', 'list', or 'exit'.");
-    }
-}
+ 
