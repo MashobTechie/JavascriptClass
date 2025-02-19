@@ -37,3 +37,12 @@ document.querySelector('.p2').innerHTML = 'Query Class'
 
 // For Tag
 document.querySelector('p').innerHTML = 'Query Tag'
+
+
+
+
+// Assignment
+// Write different with no content in them, then use JS to crete a text.
+// Read more on creating, deleting elements with DOM manipulation
+// read on the differences between innerHTML, Text Content, innerText
+// Read on the differences between query selector and querySelectorAll
