@@ -130,3 +130,4 @@ document.body.removeChild(newElement)
 
 
 // Read more on events and event handler on JS.
+// Differences between append and appendChild
