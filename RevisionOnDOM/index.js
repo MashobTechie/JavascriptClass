@@ -49,3 +49,41 @@ document.body.appendChild(myH1)
 
 // delete element
 document.body.removeChild(myH1);
+
+
+
+
+// Events:
+// onmouseover
+
+const showAlert = () => {
+    alert('We clicked the button')
+}
+
+
+const BTN = document.getElementById('BTN');
+BTN.innerText = 'Click me to change background color'
+BTN.onclick = () => {
+    document.body.style.backgroundColor = 'red'
+}
+
+
+
+
+// const inputButton = document.getElementById('inputBTN') ;
+// inputButton.onclick = () => {
+//     const inputBox = document.getElementById('Box').value;
+//     console.log(inputBox)
+// }
+
+
+
+const inputButton = document.getElementById('inputBTN');
+
+inputButton.onclick = () => {
+    const inputBoxValue = document.getElementById('Box').value;
+    console.log(inputBoxValue)
+}
+
+
+// Use DOM Manipulation to create a to-do list
