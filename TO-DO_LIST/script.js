@@ -1,41 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const taskInput = document.getElementById("taskInput");
-    const addTaskBtn = document.getElementById("addTaskBtn");
-    const taskList = document.getElementById("taskList");
+document.addEventListener('DOMContentLoaded', () => {
 
-    // Add task function
+    let userInput = document.getElementById('taskInput');
+    const addTaskButton = document.getElementById('addTaskBtn');
+    const taskList = document.querySelector('#taskList');
+
+
+    // add task
     const addTask = () => {
-        const taskText = taskInput.value.trim();
-        if (taskText === "") return; // Prevent adding empty tasks
+        let userInputText = userInput.value.trim();
+        console.log(userInputText)
 
-        // Create list item
-        const li = document.createElement("li");
-        li.textContent = taskText;
+        if (!userInputText) {
+            alert(`Your task input must be filled`)
+            return;
+        }
 
-        // Toggle completion on click
-        li.addEventListener("click", () => {
-            li.classList.toggle("completed");
+        // create the list item.
+        const taskItem = document.createElement('li');
+        taskItem.textContent = userInputText;
+
+        // create a toggle for completion
+        taskItem.addEventListener('click', () => {
+            taskItem.classList.toggle('completed')
+        })
+
+        // append the child(taskItem)
+        taskList.appendChild(taskItem);
+
+
+        // Delete Button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete');
+
+        deleteButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            taskItem.remove();
         });
 
-        // Delete button
-        const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "X";
-        deleteBtn.classList.add("delete-btn");
-        deleteBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevents toggling completion when deleting
-            li.remove();
-        });
+        // append the child(deleteButton)
+        taskItem.appendChild(deleteButton);
+        userInput.value = '';
 
-        li.appendChild(deleteBtn);
-        taskList.appendChild(li);
-        taskInput.value = ""; // Clear input field
-    };
+    }
 
-    // Add task on button click
-    addTaskBtn.addEventListener("click", addTask);
+    addTaskButton.addEventListener('click', addTask);
 
-    // Add task on Enter key press
-    taskInput.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") addTask();
-    });
+
 });
