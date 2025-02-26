@@ -105,23 +105,7 @@
 // Objective:
 // Create an interactive to-do list using JavaScript and the DOM.
 
-// Instructions:
-// Create an HTML file with:
-
-// An input field (<input> with id="taskInput") for users to enter tasks.
-// A button (<button> with id="addTaskBtn") to add tasks.
-// An unordered list (<ul> with id="taskList") to display tasks.
-// Write JavaScript to:
-
-// Capture the task input when the button is clicked.
-// Add the task as a list item (<li>) inside the task list.
-// Allow users to mark tasks as completed by clicking on them (toggle a CSS class).
-// Add a "Delete" button next to each task to remove it from the list.
-// Bonus (Optional):
-// Style the list using CSS for a better user experience.
-// Prevent empty tasks from being added.
-// Ensure tasks are displayed in a structured format.
-
+ 
 
 
 
