@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Quiz App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      .quiz-container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .correct {
+        background-color: green;
+        color: white;
+      }
+      .wrong {
+        background-color: red;
+        color: white;
+      }
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .controls button {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h2 id="question">Question goes here</h2>
+      <div id="options"></div>
+      <div class="controls">
+        <button id="prevBtn" disabled>Prev</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
