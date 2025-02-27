@@ -99,13 +99,11 @@
 // console.log(`MarkBMI is ${markBMI}`);
 
 
- 
+
 
 // // Assignment: Build a Simple To-Do List Using JavaScript
 // Objective:
 // Create an interactive to-do list using JavaScript and the DOM.
-
- 
 
 
 
@@ -140,7 +138,7 @@ function loadQuestion() {
     });
 
     document.getElementById("prevBtn").disabled = currentQuestionIndex === 0;
-    
+
     // Change button text to "Submit" on the last question
     nextBtn.textContent = currentQuestionIndex === quizData.length - 1 ? "Submit" : "Next";
 }
@@ -170,7 +168,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     } else {
         const score = calculateScore();
         alert(`Quiz Completed! Your score: ${score}/${quizData.length}`);
-        
+
         currentQuestionIndex = 0; // Reset quiz to first question
         selectedAnswers = {}; // Clear previous selections
         loadQuestion();
@@ -185,3 +183,12 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 });
 
 loadQuestion();
+
+
+
+
+
+
+
+
+
