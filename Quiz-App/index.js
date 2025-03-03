@@ -50,11 +50,11 @@ function checkAnswer(button, selectedAnswer) {
     // document.querySelectorAll(".btn").forEach(btn => btn.disabled = false);
     // User can be able to choose another option incase they  did a mistake without disabling the other button
     button.disabled = true; // Disable the button after choosing an answer to prevent multiple clicks
- button.style.backgroundColor ='red'; // Change the button color to red if the user chose wrong answer
+    button.style.backgroundColor = 'red'; // Change the button color to red if the user chose wrong answer
 
- // If they pick another option in the same question, return the earlier one into original state
+    // If they pick another option in the same question, return the earlier one into original state
 
-    
+
 
     button.classList.add(selectedAnswer === correctAnswer ? "correct" : "wrong");
 }
