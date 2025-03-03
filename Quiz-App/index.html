@@ -18,6 +18,7 @@
         border-radius: 10px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
       }
+      
       .btn {
         display: block;
         width: 100%;
@@ -47,14 +48,22 @@
         border: none;
         border-radius: 5px;
       }
+
+      #options{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        padding: 12px;
+      }
     </style>
   </head>
   <body>
     <div class="quiz-container">
-      <h2 id="question">Question goes here</h2>
+      <h2 id="question">This is for questions</h2>
       <div id="options"></div>
       <div class="controls">
-        <button id="prevBtn" disabled>Prev</button>
+        <button id="prevBtn">Prev</button>
         <button id="nextBtn">Next</button>
       </div>
     </div>

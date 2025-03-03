@@ -1,47 +1,8 @@
-// Create the quiz data
-const QuizData = [
-    {
-        question: "A second-year college student is usually called a what?",
-        options: [
-            "sophomore",
-            "senior",
-            "freshman ",
-            "junior "
-        ],
-        answer: "sophomore"
-    },
-    {
-        question: 'What is the capital of France?',
-        options: [
-            'Berlin',
-            'Kenya',
-            'Washington DC',
-            'Paris'
-        ],
-        answer: 'Paris'
-    },
-    {
-        "question": "From what language does the term 'R.S.V.P.' originate?",
-        options: [
-            "Russian",
-            "Italian",
-            "Portuguese",
-            "French"
-        ],
-        answer: "French"
-    },
-
+const quizData = [
+    { question: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" },
+    { question: "What is the capital of France?", options: ["London", "Berlin", "Paris", "Madrid"], answer: "Paris" },
+    { question: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Jupiter", "Venus"], answer: "Mars" }
 ];
-
-// To get through the quiz data questions and options
-
-console.log(QuizData[0].question);
-console.log(QuizData[0].options[0]);
-
-// if you check this, they give you the first question and the first option in the first question.DO the same for the rest of the questions and options.
-// Then try using a loop to get through all the questions and options.
-
-
 
 let currentQuestionIndex = 0;
 let selectedAnswers = {}; // Store selected answers
@@ -63,8 +24,17 @@ function loadQuestion() {
             button.classList.add(option === quizData[currentQuestionIndex].answer ? "correct" : "wrong");
         }
 
-        button.addEventListener("click", () => checkAnswer(button, option));
+        button.addEventListener("click", () => {
+            button.style.backgroundColor = ' red';
+
+            checkAnswer(button, option)
+        });
         optionsEl.appendChild(button);
+        button.style.backgroundColor = ' blue';
+        button.style.color = 'white';
+        button.style.padding = '10px';
+        button.style.margin = '10px';
+        button.style.border = 'none';
     });
 
     document.getElementById("prevBtn").disabled = currentQuestionIndex === 0;
@@ -77,7 +47,15 @@ function checkAnswer(button, selectedAnswer) {
     const correctAnswer = quizData[currentQuestionIndex].answer;
     selectedAnswers[currentQuestionIndex] = selectedAnswer;
 
-    document.querySelectorAll(".btn").forEach(btn => btn.disabled = true);
+    // document.querySelectorAll(".btn").forEach(btn => btn.disabled = false);
+    // User can be able to choose another option incase they  did a mistake without disabling the other button
+    button.disabled = true; // Disable the button after choosing an answer to prevent multiple clicks
+ button.style.backgroundColor ='red'; // Change the button color to red if the user chose wrong answer
+
+ // If they pick another option in the same question, return the earlier one into original state
+
+    
+
     button.classList.add(selectedAnswer === correctAnswer ? "correct" : "wrong");
 }
 
