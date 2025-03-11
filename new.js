@@ -55,7 +55,7 @@
 
 
 // // Constructingt sentences with variables.
-// // Create a variable for firstname, lastname and age. 
+// // Create a variable for firstname, lastname and age.
 // // Construct a sentence with my name is (firstname) and your (lastname). I am (age) years old.
 
 // let firstname = 'Mariam';
@@ -90,7 +90,7 @@
 //     console.log(false)
 // }
 
-// // console.log('MarkBMI is ' + markBMI); 
+// // console.log('MarkBMI is ' + markBMI);
 // // first way if writing statement in the console.log
 
 // // second way of writing statement in the console.log
@@ -106,89 +106,17 @@
 // Create an interactive to-do list using JavaScript and the DOM.
 
 
+// Javascript Behind The Scene
 
-const quizData = [
-    { question: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" },
-    { question: "What is the capital of France?", options: ["London", "Berlin", "Paris", "Madrid"], answer: "Paris" },
-    { question: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Jupiter", "Venus"], answer: "Mars" }
-];
-
-let currentQuestionIndex = 0;
-let selectedAnswers = {}; // Store selected answers
-
-function loadQuestion() {
-    const questionEl = document.getElementById("question");
-    const optionsEl = document.getElementById("options");
-    const nextBtn = document.getElementById("nextBtn");
-
-    questionEl.textContent = quizData[currentQuestionIndex].question;
-    optionsEl.innerHTML = "";
-
-    quizData[currentQuestionIndex].options.forEach(option => {
-        const button = document.createElement("button");
-        button.textContent = option;
-        button.classList.add("btn");
-
-        if (selectedAnswers[currentQuestionIndex] === option) {
-            button.classList.add(option === quizData[currentQuestionIndex].answer ? "correct" : "wrong");
-        }
-
-        button.addEventListener("click", () => checkAnswer(button, option));
-        optionsEl.appendChild(button);
-    });
-
-    document.getElementById("prevBtn").disabled = currentQuestionIndex === 0;
-
-    // Change button text to "Submit" on the last question
-    nextBtn.textContent = currentQuestionIndex === quizData.length - 1 ? "Submit" : "Next";
-}
-
-function checkAnswer(button, selectedAnswer) {
-    const correctAnswer = quizData[currentQuestionIndex].answer;
-    selectedAnswers[currentQuestionIndex] = selectedAnswer;
-
-    document.querySelectorAll(".btn").forEach(btn => btn.disabled = true);
-    button.classList.add(selectedAnswer === correctAnswer ? "correct" : "wrong");
-}
-
-function calculateScore() {
-    let score = 0;
-    quizData.forEach((question, index) => {
-        if (selectedAnswers[index] === question.answer) {
-            score++;
-        }
-    });
-    return score;
-}
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-    if (currentQuestionIndex < quizData.length - 1) {
-        currentQuestionIndex++;
-        loadQuestion();
-    } else {
-        const score = calculateScore();
-        alert(`Quiz Completed! Your score: ${score}/${quizData.length}`);
-
-        currentQuestionIndex = 0; // Reset quiz to first question
-        selectedAnswers = {}; // Clear previous selections
-        loadQuestion();
-    }
-});
-
-document.getElementById("prevBtn").addEventListener("click", () => {
-    if (currentQuestionIndex > 0) {
-        currentQuestionIndex--;
-        loadQuestion();
-    }
-});
-
-loadQuestion();
-
-
-
-
-
-
-
-
+// High Level Overview Of Javascript
+// 1.High Level
+//  2. Garbage - Collected
+// 3. Interpreted or just-in-time compiled
+// 4. Multi-paradigm. Paradigm is an approach of structuring code, which will direct your coding style and technique.
+// a. Procedural Technique b. OOP c. Functional Programming
+// 5. Prototype-based object-oriented
+// 6. First-class function
+// 7. Dynamic 
+// 8. Single-threaded
+// 9. Non-blocking event loop 
 
