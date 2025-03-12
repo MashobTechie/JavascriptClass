@@ -120,3 +120,17 @@
 // 8. Single-threaded
 // 9. Non-blocking event loop 
 
+
+// Javascript Engine And Runtime
+ 
+
+
+
+// Set and Set Interval
+setTimeout(()=> {console.log(`We're setting the timeout to be 5 secs`)}, 5000)
+// This will log before the set Timeout, this is called asynchronous function
+console.log(`Waiting`)
+
+
+// Pass arguments   through
+setTimeout((ing1 , ing2)=> {console.log(`Pizza will be served soon with ${ing1} and ${ing2}`)}, 2000, 'Spinach' , 'Olives')
