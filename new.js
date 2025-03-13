@@ -134,3 +134,35 @@ console.log(`Waiting`)
 
 // Pass arguments   through
 setTimeout((ing1 , ing2)=> {console.log(`Pizza will be served soon with ${ing1} and ${ing2}`)}, 2000, 'Spinach' , 'Olives')
+
+
+
+
+
+// Initialising our set Timeout
+const ourSetAlert = setTimeout(() => {
+    alert(`Hello World`)
+}, 10000);
+
+
+alert(`Async Alert`)
+
+// To stop the execution of set Timeout
+clearTimeout(ourSetAlert)
+
+
+// Same as timeout , but re-occurs / invoke the same function after the specified time
+setInterval(() => {
+    alert(`Our Interval`)
+}, 5000);
+
+// Stop the excution of set Interval , store the function into  a variable
+const newInterval = setInterval(() => {
+    console.log(`Hi`)
+}, 3000);
+
+clearInterval(newInterval)
+
+
+// Assignment 
+// Build a countdown timer
