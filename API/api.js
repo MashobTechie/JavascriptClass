@@ -28,7 +28,6 @@ const getCoutryData = (country) => {
      })
 };
 getCoutryData('Portugal');
-// This will return the response object of the API call.
-
+ 
 
 
