@@ -1,42 +1,36 @@
-
 const addTaskBTN = document.getElementById('addTaskBtn');
+const taskInput = document.getElementById('taskInput');
+const taskList = document.getElementById('taskList');
+
+// Load tasks from localStorage when page loads
+document.addEventListener("DOMContentLoaded", loadTasks);
+
 addTaskBTN.addEventListener('click', () => {
-    const taskInput = document.getElementById('taskInput');
+    let taskInputValue = taskInput.value.trim();
 
-    const taskList = document.getElementById('taskList');
-
-    let taskInputValue = taskInput.value;
-    // Log the input value to the console
-    // console.log(taskInputValue);
-
-    // To verify if the input is filled before adding the task
     if (!taskInputValue) {
         alert(`Your task input must be filled`);
         return;
-
     }
 
+    addTask(taskInputValue);
+    saveTask(taskInputValue);
+    taskInput.value = ''; // Clear input after adding task
+});
 
-    // Create a new list item
+// Function to add task to UI
+function addTask(taskText) {
     const listItem = document.createElement('li');
-    // Make the text content of the list item to be the logged vaue of the taskInput
-    listItem.textContent = taskInputValue;
-    // Render the element to the DOM
-    taskList.appendChild(listItem);
+    listItem.textContent = taskText;
 
-    // Clear the input after adding the task
-    taskInput.value = '';
-
-
-    // Create a delete button with the list item
+    // Create delete button
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete Task';
-    // Render the delete button to the DOM
-    listItem.appendChild(deleteButton);
 
-    // Function of delete
+    // Delete function
     deleteButton.addEventListener('click', () => {
         listItem.remove();
+        removeTask(taskText);
     });
 
     // Style the delete button
@@ -46,30 +40,27 @@ addTaskBTN.addEventListener('click', () => {
     deleteButton.style.border = 'none';
     deleteButton.style.borderRadius = '5px';
 
+    // Append delete button to task item
+    listItem.appendChild(deleteButton);
+    taskList.appendChild(listItem);
+}
 
-});
+// Save task to localStorage
+function saveTask(taskText) {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.push(taskText);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
 
-// To save /set item : 
-localStorage.setItem('task', 'Go to bed')
-// It'll have two props in key/value pair.
-// the key (task) and the value (teh task value itself)
+// Load tasks from localStorage
+function loadTasks() {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.forEach(task => addTask(task));
+}
 
-/// To get/retrieve: It'll be one which is the key you used to save it
-localStorage.getItem('task')
-
-// To remove one item
-localStorage.removeItem('task')
-
-localStorage.setItem('task1', 'Go to bed')
-localStorage.setItem('task2', 'Go to spa')
-localStorage.setItem('task3', 'Go to work')
-
-
-// Tpo clear all items in the local storage
-localStorage.clear()
-
-
-
-
-// Assignment 
-// Add local storage to your to do list
+// Remove task from localStorage
+function removeTask(taskText) {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks = tasks.filter(task => task !== taskText);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
