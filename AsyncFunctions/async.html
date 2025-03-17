@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <p id="demo"></p>
 
-
     <h1 id="demo1"></h1>
+
+    <h2>
+      Task: Create a function orderCoffee that takes a callback function as a
+      parameter. Inside orderCoffee, use setTimeout to simulate coffee being
+      prepared in 3 seconds. When coffee is ready, call the callback function to
+      let the customer know.
+    </h2>
+
+    <h2>
+      Exercise 2: Pizza Order with Promises 🍕 Now, let’s improve the system
+      using Promises instead of callbacks! Create a function orderPizza that
+      returns a Promise. Inside, use setTimeout to simulate pizza baking in 5
+      seconds. If the order is successful, the promise resolves with "Pizza is
+      ready! 🍕" Use .then() to print "Eating the pizza now!"
+    </h2>
+
+    <h2>
+      📝 Task: Simulating a Multi-Step Process You will write an async function
+      called processData that does the following: Logs "Starting process..."
+      immediately. Waits 2 seconds, then logs "Step 1: Data received ✅". Waits
+      another 2 seconds, then logs "Step 2: Processing data...⌛". Waits another
+      2 seconds, then randomly decides whether the process succeeds or fails:
+      Success (50% chance) → Logs "Step 3: Process completed successfully! 🎉"
+      Failure (50% chance) → Logs "Step 3: Process failed ❌" 🔹 Use
+      a random number to determine success or failure.  
+    </h2>
     <script src="./async.js"></script>
-</body>
+  </body>
 </html>
