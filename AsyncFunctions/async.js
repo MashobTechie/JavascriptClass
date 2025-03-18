@@ -72,12 +72,11 @@ myFunction().then(
 // The await keyword can only be used inside an async function.
 
 async function myDisplay() {
-    let myPromise = new Promise(function(resolve) {
-      setTimeout(function() {resolve("Hi, your promise is here");}, 3000);
+    let myPromise = new Promise(function (resolve) {
+        setTimeout(function () { resolve("Hi, your promise is here"); }, 3000);
     });
     document.getElementById("demo1").innerHTML = await myPromise;
-  }
-  
-  myDisplay();
-  
-  
+}
+
+myDisplay();
+
