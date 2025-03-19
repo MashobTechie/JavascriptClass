@@ -22,41 +22,36 @@ function orderPizza() {
     })
 }
 
+orderPizza().then(() => {
+    console.log('Eating the pizza now')
+})
 
 
-// function orderPizza() {
-//     return new Promise((resolve, reject) => {
-//         console.log("Baking pizza...");
-//         setTimeout(() => {
-//             resolve("Pizza is ready! 🍕");
-//         }, 5000);
-//     });
-// }
-
-// orderPizza().then((message) => {
-//     document.getElementById("demo1").innerText = message;
-//     console.log(message);
-//     console.log("Eating the pizza now!");
-// });
+ 
 
 // // Task 3: Simulating a Multi-Step Process
-// async function processData() {
-//     console.log("Starting process...");
-    
-//     await new Promise(resolve => setTimeout(resolve, 2000));
-//     console.log("Step 1: Data received ✅");
-    
-//     await new Promise(resolve => setTimeout(resolve, 2000));
-//     console.log("Step 2: Processing data...⌛");
-    
-//     await new Promise(resolve => setTimeout(resolve, 2000));
-    
-//     const success = Math.random() > 0.5;
-//     if (success) {
-//         console.log("Step 3: Process completed successfully! 🎉");
-//     } else {
-//         console.log("Step 3: Process failed ❌");
-//     }
-// }
 
-// processData();
+async function processData () {
+    console.log('Starting process...');
+
+    await new Promise(success => setTimeout(success, 2000));
+    console.log('Data Received')
+
+    await new Promise(success => setTimeout(success, 2000));
+    console.log('Processing data...')
+
+    await new Promise(success => setTimeout(success, 2000));
+    console.log('Data Received')
+
+    const success = Math.random() > 0.5;
+
+    if (success) {
+        console.log('Process completed siuccessfully! ���')
+    } else{
+        console.log('Process failed')
+    }
+
+}
+
+
+processData();
