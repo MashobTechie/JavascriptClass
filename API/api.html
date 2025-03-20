@@ -3,11 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Country Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .flag, .coat-of-arms {
+            width: 100px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .info {
+            margin-bottom: 10px;
+        }
+        .info strong {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container" id="country-info">
+        <h1 id="country-name"></h1>
+        <img id="flag" class="flag" alt="Country Flag">
+        <img id="coat-of-arms" class="coat-of-arms" alt="Coat of Arms">
+        <div class="info"><strong>Capital:</strong> <span id="capital"></span></div>
+        <div class="info"><strong>Population:</strong> <span id="population"></span></div>
+        <div class="info"><strong>Region:</strong> <span id="region"></span></div>
+        <div class="info"><strong>Subregion:</strong> <span id="subregion"></span></div>
+        <div class="info"><strong>Official Language:</strong> <span id="language"></span></div>
+        <div class="info"><strong>Currency:</strong> <span id="currency"></span></div>
+        <div class="info"><strong>Timezone:</strong> <span id="timezone"></span></div>
+        <div class="info"><strong>Bordering Country:</strong> <span id="borders"></span></div>
+        <div class="info"><strong>Google Maps:</strong> <a id="maps-link" href="#" target="_blank">View Map</a></div>
+    </div>
+<!-- 
+    <script src="./api.js">
+       
+    </script> -->
 
-    <script src="./api.js"></script>
+
+    <script>
+        // Function to fetch country data from the API
+        async function fetchCountryData() {
+            try {
+                // Fetching data from restcountries API
+                const response = await fetch('https://restcountries.com/v3.1/name/portugal');
+                if (!response.ok) {
+                    throw new Error(`Country not found (${response.status})`);
+                }
+
+                // Convert response to JSON
+                const data = await response.json();
+                const country = data[0]; // Extract first country from response
+
+                // Updating the HTML elements with fetched country data
+                document.getElementById('country-name').textContent = country.name.common;
+                document.getElementById('flag').src = country.flags.png;
+                document.getElementById('coat-of-arms').src = country.coatOfArms.png;
+                document.getElementById('capital').textContent = country.capital[0];
+                document.getElementById('population').textContent = country.population.toLocaleString();
+                document.getElementById('region').textContent = country.region;
+                document.getElementById('subregion').textContent = country.subregion;
+                document.getElementById('language').textContent = Object.values(country.languages)[0];
+                document.getElementById('currency').textContent = Object.keys(country.currencies)[0];
+                document.getElementById('timezone').textContent = country.timezones.join(', ');
+                document.getElementById('borders').textContent = country.borders ? country.borders.join(', ') : 'None';
+                document.getElementById('maps-link').href = country.maps.googleMaps;
+            } catch (error) {
+                // Handling errors and displaying a message
+                console.error('Error fetching country data:', error);
+                document.getElementById('country-info').innerHTML = `<h2>Failed to load country data</h2>`;
+            }
+        }
+
+        // Fetch Portugal data when the page loads
+        fetchCountryData();
+    </script>
 </body>
 </html>
