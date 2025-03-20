@@ -80,4 +80,37 @@ const countryRequest = (countryName) => {
     }
 
 }
-countryRequest('France')
+countryRequest('France');
+
+// Try manipulating the data gotten from the api to the DOM;
+// Display the data on the DOM.
+
+async function getCountryData(countryName) {
+    try {
+        const request = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+        const data = await request.json();
+        console.log(data);
+        const country = data[0];
+
+        // Updating the HTML elements with fetched country data
+        document.getElementById('country-name').textContent = country.name.common;
+        document.getElementById('flag').src = country.flags.png;
+        document.getElementById('coat-of-arms').src = country.coatOfArms.png;
+        document.getElementById('capital').textContent = country.capital[0];
+        document.getElementById('population').textContent = country.population.toLocaleString();
+        document.getElementById('region').textContent = country.region;
+        document.getElementById('subregion').textContent = country.subregion;
+        document.getElementById('language').textContent = Object.values(country.languages)[0];
+        document.getElementById('currency').textContent = Object.keys(country.currencies)[0];
+        document.getElementById('timezone').textContent = country.timezones.join(', ');
+        document.getElementById('borders').textContent = country.borders ? country.borders.join(', ') : 'None';
+        document.getElementById('maps-link').href = country.maps.googleMaps;
+        
+
+    } catch (error) {
+        console.log(error)
+        document.createElement('div').innerHTML = error;
+        document.body.appendChild(errorDiv);
+        return;
+    }
+}getCountryData('USA');
