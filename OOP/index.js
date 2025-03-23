@@ -59,8 +59,50 @@ class Student {
 }
 
 // With the help of the above class, we can have multiple students or instances.
-// Here's info for Student - 01
+// Here's info for **Student - 01**:
 
+// Student 1
+{
+    Name = "John";
+    Age = 15;
+    Standard = 9;
+
+    study(){
+        // Study
+    }
+
+    Play(){
+        // Play
+
+    }
+
+    doHomeWork(){
+        // Do Home Work
+    }
+
+}
+
+// Here's info for **Student - 02**:
+
+// Student 2
+{
+    Name = "Gorge"
+    Age = 18
+    Standard = 12
+
+    study(){
+        // Study
+    }
+
+    Play(){
+        // Play
+    }
+
+    doHomeWork(){
+        // Do Home Work
+    }
+
+}
 
 // There are 4 main principles in OOP, and they are:
 
