@@ -1,0 +1,25 @@
+🛒 Mini E-Commerce Store - Project Description
+📌 Overview
+In this project, you’ll build a simple e-commerce store using JavaScript and the FakeStore API. This store will display a list of products, allow users to view details, and even add items to a shopping cart.
+
+This project will help you practice working with APIs, handling dynamic data, and manipulating the DOM.
+
+📌 What You’ll Build
+Product Listing Page – Displays products fetched from the FakeStore API.
+
+Filter by Category – Users can filter products (e.g., Electronics, Clothing).
+
+Product Details Page – Clicking a product shows more details (price, description, image).
+
+Shopping Cart (Basic) – Users can add/remove items, and the cart is stored in localStorage.
+
+Cart Summary Page (Bonus) – Shows total price and items in the cart.
+
+📌 Getting Started
+Fetch product data from FakeStore API (https://fakestoreapi.com/products).
+
+Display the products dynamically on the page.
+
+Allow users to view product details when clicked.
+
+Implement a simple cart system (store data in localStorage).
